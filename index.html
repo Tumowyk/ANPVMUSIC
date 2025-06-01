@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>anpv.music</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #4b4747;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #3f3a3a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #d4c36b;
+    }
+    .hero {
+      background: url('background.jpg') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cta-button {
+      background-color: transparent;
+      border: 1px solid #d4c36b;
+      color: #d4c36b;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    .cta-button:hover {
+      background-color: #d4c36b;
+      color: black;
+    }
+    section {
+      padding: 60px 40px;
+    }
+    h2 {
+      color: #d4c36b;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .music-player, .video-player {
+      margin-top: 20px;
+    }
+  </style>
+
+  <style>
+    @media (max-width: 600px) {
+      section {
+        padding: 30px 20px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      video {
+        width: 200px !important;
+      }
+      audio {
+        width: 100% !important;
+      }
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">anpv.music</div>
+    <nav>
+      <a href="#home">Головна</a>
+      <a href="#about">Про мене</a>
+      <a href="#music">Моя музика</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <a class="cta-button" href="#music">Слухати мій новий альбом ></a>
+  </section>
+
+  <section id="about">
+    <h2>Про мене</h2>
+    <p>Привіт! Я — Ангеліна, незалежна співачка та авторка пісень. Моя музика — це щира емоція, глибокі тексти та душевне звучання. Дякую, що ви тут!</p>
+  </section>
+  <section id="music" style="
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    color: #fff;
+    border: 3px solid #d4c36b;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(212, 195, 107, 0.4);
+  ">
+    <h2 style="font-size: 36px; color: #d4c36b; text-align: center;">Моя музика</h2>
+    <p style="font-size: 18px; text-align: center; margin-bottom: 30px;">Слухайте мої треки онлайн:</p>
+    <div class="music-player" style="margin-bottom: 20px;">
+      <p style="font-size: 18px; color: #d4c36b; margin: 10px 0 5px;">ANPV MUSIC – До війни</p>
+      <audio controls style="width: 100%; border-radius: 10px; outline: none;">
+        <source src="ANPV MUSIC – До війни.mp3" type="audio/mp3">
+        Ваш браузер не підтримує аудіо.
+      </audio>
+<div class="music-player" style="margin-bottom: 20px;">
+  <p style="font-size: 18px; color: #d4c36b; margin: 10px 0 5px;">ANPV MUSIC - ТИ І Я</p>
+  <audio controls style="width: 100%; border-radius: 10px; outline: none;">
+    <source src="ANPV MUSIC - ТИ І Я.mp3" type="audio/mp3">
+    Ваш браузер не підтримує аудіо.
+  </audio>
+</div>
+<div class="music-player" style="margin-bottom: 20px;">
+  <p style="font-size: 18px; color: #d4c36b; margin: 10px 0 5px;">ANPV MUSIC - Під небом свободи</p>
+  <audio controls style="width: 100%; border-radius: 10px; outline: none;">
+    <source src="ANPV MUSIC - Під небом свободи.mp3" type="audio/mp3">
+    Ваш браузер не підтримує аудіо.
+  </audio>
+</div>
+<div class="music-player" style="margin-bottom: 20px;">
+  <p style="font-size: 18px; color: #d4c36b; margin: 10px 0 5px;">ANPV MUSIC - Не люби</p>
+  <audio controls style="width: 100%; border-radius: 10px; outline: none;">
+    <source src="ANPV MUSIC - Не люби.mp3" type="audio/mp3">
+    Ваш браузер не підтримує аудіо.
+  </audio>
+</div>
+<div class="music-player" style="margin-bottom: 20px;">
+  <p style="font-size: 18px; color: #d4c36b; margin: 10px 0 5px;">ANPV MUSIC - Ісорія кохання</p>
+  <audio controls style="width: 100%; border-radius: 10px; outline: none;">
+    <source src="ANPV MUSIC - Ісорія кохання.mp3" type="audio/mp3">
+    Ваш браузер не підтримує аудіо.
+  </audio>
+</div>
+<div class="music-player" style="margin-bottom: 20px;">
+  <p style="font-size: 18px; color: #d4c36b; margin: 10px 0 5px;">ANPV MUSIC - Дві-Різні-Сторони</p>
+  <audio controls style="width: 100%; border-radius: 10px; outline: none;">
+    <source src="ANPV MUSIC - Дві-Різні-Сторони.mp3" type="audio/mp3">
+    Ваш браузер не підтримує аудіо.
+  </audio>
+</div>
+<div class="music-player" style="margin-bottom: 20px;">
+  <p style="font-size: 18px; color: #d4c36b; margin: 10px 0 5px;">ANPV MUSIC - Далеко</p>
+  <audio controls style="width: 100%; border-radius: 10px; outline: none;">
+    <source src="ANPV MUSIC - Далеко.mp3" type="audio/mp3">
+    Ваш браузер не підтримує аудіо.
+  </audio>
+</div>
+    </div>
+  </section>
+
+  <div style="
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    overflow-x: auto;
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    border: 2px solid #444;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.2);
+  ">
+    <video controls style="
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+      outline: none;
+    ">
+      <source src="video_2025-06-01_14-03-44.mp4" type="video/mp4">
+      Ваш браузер не підтримує відео тег.
+    </video>
+    <video controls style="
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+      outline: none;
+    ">
+      <source src="video2.mp4" type="video/mp4">
+      Ваш браузер не підтримує відео тег.
+    </video>
+    <video controls style="
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+      outline: none;
+    ">
+      <source src="video3.mp4" type="video/mp4">
+      Ваш браузер не підтримує відео тег.
+    </video>
+ <video controls style="
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+      outline: none;
+    ">
+      <source src="video4.mp4" type="video/mp4">
+      Ваш браузер не підтримує відео тег.
+    </video>
+</div>
+<div style="
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+  overflow-x: auto;
+  background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+  border: 2px solid #444;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.2);
+">
+
+  <video controls style="width: 250px; border-radius: 15px; box-shadow: 0 4px 12px rgba(255,255,255,0.1);">
+    <source src="video5.mp4" type="video/mp4">
+  </video>
+
+  <video controls style="width: 250px; border-radius: 15px; box-shadow: 0 4px 12px rgba(255,255,255,0.1);">
+    <source src="video6.mp4" type="video/mp4">
+  </video>
+
+</div>
+</div>
+  <section id="contact" style="
+    color: #fff;
+    border: 3px solid #ffcc00;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 600px;
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+  ">
+    <h2 style="font-size: 36px; color: #ffcc00; text-align: center;">Контакти</h2>
+    <p style="text-align: center;">
+      <a href="https://t.me/anpv_official" target="_blank" style="font-size: 20px; color: #00bfff; font-weight: bold; text-decoration: none;">Telegram канал</a>
+    </p>
+    <p style="text-align: center;">
+      <a href="https://youtube.com/@anpvmusic?si=tw-7BrA8QE5vygZb" target="_blank" style="font-size: 20px; color: #ff4444; font-weight: bold; text-decoration: none;">YouTube</a>
+    </p>
+    <p style="text-align: center;">
+      <a href="https://www.tiktok.com/@anpv.music?_t=ZS-8wq7fA8aHWa&_r=1" target="_blank" style="font-size: 20px; color: #ff69b4; font-weight: bold; text-decoration: none;">TikTok</a>
+    </p>
+  </section>
+
+</body>
+</html>
