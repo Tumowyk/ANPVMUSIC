@@ -89,6 +89,76 @@
         max-width: 100% !important;
         height: auto !important;
       }
+/* Загальні стилі для мобільної адаптації */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+/* Хедер */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #222;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.burger {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Меню */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+    font-size: 1.2rem;
+  }
+}
+
+/* Додай стилі до інших елементів як потрібно */
     }
   </style>
 </head>
@@ -172,6 +242,31 @@
     Ваш браузер не підтримує аудіо.
   </audio>
 </div>
+<script>
+  // Зупиняє всі інші медіа при старті нового
+  document.addEventListener('play', function(e) {
+    const allMedia = document.querySelectorAll('audio, video');
+    allMedia.forEach(media => {
+      if (media !== e.target && !media.paused) {
+        media.pause();
+      }
+    });
+  }, true);
+
+  // Додає автозапуск наступного медіа при завершенні поточного
+  window.addEventListener('DOMContentLoaded', () => {
+    const allMedia = Array.from(document.querySelectorAll('audio, video'));
+
+    allMedia.forEach((media, index) => {
+      media.addEventListener('ended', () => {
+        const nextMedia = allMedia[index + 1];
+        if (nextMedia) {
+          nextMedia.play();
+        }
+      });
+    });
+  });
+</script>
     </div>
   </section>
 
